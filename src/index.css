@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    /* background: #f1f1f1; */
+}
+#main .header{
+    width: 100%;
+    height: 15%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    background: rgb(145, 105, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+.header input{
+    display: inline-block;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    border-radius: 5px 0px 0px 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+.header button{
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: goldenrod;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cards-container{
+    width: 100%;
+    height: 100%;
+    margin-top: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1.5%;
+}
+.cards-container .card{
+    width: 30%;
+    overflow: hidden;
+    border-radius: 12px !important;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4 !important;
+}
+.card img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.card h1{
+ text-transform: capitalize; 
+ text-align: center;
+ font-size: 30px;
+ margin: 12.5px 0;
+}
+.card h4{
+ text-transform: capitalize; 
+ text-align: center;
+ font-size: 20px;
+}
+.card h4 span{
+ color: rgb(145, 105, 5);
+ text-transform: uppercase;
+}
+.card a{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: rgb(145, 105, 5);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 12.5px;
+    cursor: pointer;
+}
+
+.recipe-main{
+    width: 100%;
+    padding-bottom: 35px;
+}
+.recipe-main .recipe-banner{
+    position: relative;
+    height: 65vh;
+}
+.recipe-main .recipe-banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.recipe-main .recipe-banner::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1 !important;
+}
+.recipe-banner .banner-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: red; */
+    z-index: 9;
+}
+.recipe-main .recipe-banner h1{
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    position: relative;
+}
+.recipe-meta{
+    color: #fff;
+    text-transform: uppercase; 
+    text-align: center;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+h4.ingredient{
+    font-size: 50px;
+    text-align: center;
+    margin: 50px 0 20px 0;
+}
+ul.ingredients{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+.ingredients li{
+    width: 25%;
+    background: rgb(145, 105, 5);
+    border: 2px solid #000;
+    color: #fff;
+    padding: 20px 12px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+h4.recipe{
+    font-size: 50px;
+    text-align: center;
+    margin: 75px 0 10px 0;
+}
+p.recipe-content{
+    font-size: 20px;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    line-height: 1.3em;
+}
+a.video{
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: #fff;
+    background: rgb(145, 105, 5);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px auto 0px auto;
+    cursor: pointer;
+}
